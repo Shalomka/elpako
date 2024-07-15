@@ -14,14 +14,15 @@ class MobileCertificates {
   late final String _baseUrl;
 
   /// Dio client for making API requests
-  final Dio _dio = Dio();
+  final Dio _dio;
 
-  MobileCertificates({required this.apiKey}) {
+  MobileCertificates({required this.apiKey, required Dio dio}) : _dio = dio {
     _baseUrl = 'https://api-staging.elpako.lt/api/v1/mobile';
     init();
   }
 
-  MobileCertificates.sandbox({required this.apiKey}) {
+  MobileCertificates.sandbox({required this.apiKey, required Dio dio})
+      : _dio = dio {
     _baseUrl = 'https://api-staging.elpako.lt/api/v1/mobile';
     init();
   }
