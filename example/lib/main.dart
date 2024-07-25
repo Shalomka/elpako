@@ -26,7 +26,7 @@ class MainApp extends StatelessWidget {
                 await uploadFile(path);
                 log('File uploaded');
               },
-              icon: Icon(Icons.upload)),
+              icon: const Icon(Icons.upload)),
         ),
       ),
     );

@@ -1,5 +1,7 @@
 // As docummented in https://documenter.getpostman.com/view/11918038/T17FATVh#b5edfb9c-6682-4625-974b-c911d95e8ce1
 
+// ignore_for_file: invalid_annotation_target
+
 import 'package:elpako/elpako.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
