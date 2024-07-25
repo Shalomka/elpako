@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Initial release to support basic PDF upload, digital signature and download signed doc
