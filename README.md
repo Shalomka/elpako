@@ -7,12 +7,12 @@ Refer to https://elpako.lt/en/ for further details
 
 ## Features
 
-- [x] PDF upload (basic)
+- :heavy_check_mark: PDF upload (basic)
 - [ ] PDF full support
 - [ ] adoc upload (basic)
 - [ ] adoc full support
-- [x] Digital signing with SmartID
-- [x] Digital signing with MobileID
+- :heavy_check_mark: Digital signing with SmartID
+- :heavy_check_mark: Digital signing with MobileID
 - [ ] Digital signing with SmartCard
 - [ ] Digital signing with ATK NFC
 - [ ] Elpako Gateway API support
