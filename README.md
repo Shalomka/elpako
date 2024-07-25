@@ -1,5 +1,5 @@
 
-Elpako is an unoficial wrapper around Elpako API, providing a simple way to upload and digitaly sign documents. Elpako library is a wrapper around their API written in Dart.
+Elpako is an unoficial wrapper around Elpako API, providing a simple way to upload and digitaly sign documents.
 
 I strongly recommend using this on the server side with some of the Dart backend servers already available.
 
