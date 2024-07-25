@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:elpako/src/models/download_models.dart';
-import 'package:http/http.dart' as http;
-
 import 'package:elpako/elpako.dart';
+import 'package:http/http.dart' as http;
 
 /// Client for the Epako gateway API
 class ElpakoClient {
