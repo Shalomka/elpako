@@ -357,9 +357,6 @@ mixin _$FileUploadResponse {
   /// Token of the document that was signed
   String get token => throw _privateConstructorUsedError;
 
-  /// Certificate of the signer if available
-  String? get certificate => throw _privateConstructorUsedError;
-
   /// Server message
   String? get message => throw _privateConstructorUsedError;
 
@@ -388,7 +385,6 @@ abstract class $FileUploadResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'control_code') String controlCode,
       String token,
-      String? certificate,
       String? message,
       List<ElPakoError> errors,
       ResponseStatus? status,
@@ -410,7 +406,6 @@ class _$FileUploadResponseCopyWithImpl<$Res, $Val extends FileUploadResponse>
   $Res call({
     Object? controlCode = null,
     Object? token = null,
-    Object? certificate = freezed,
     Object? message = freezed,
     Object? errors = null,
     Object? status = freezed,
@@ -425,10 +420,6 @@ class _$FileUploadResponseCopyWithImpl<$Res, $Val extends FileUploadResponse>
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-      certificate: freezed == certificate
-          ? _value.certificate
-          : certificate // ignore: cast_nullable_to_non_nullable
-              as String?,
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -460,7 +451,6 @@ abstract class _$$FileUploadResponseImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'control_code') String controlCode,
       String token,
-      String? certificate,
       String? message,
       List<ElPakoError> errors,
       ResponseStatus? status,
@@ -480,7 +470,6 @@ class __$$FileUploadResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? controlCode = null,
     Object? token = null,
-    Object? certificate = freezed,
     Object? message = freezed,
     Object? errors = null,
     Object? status = freezed,
@@ -495,10 +484,6 @@ class __$$FileUploadResponseImplCopyWithImpl<$Res>
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-      certificate: freezed == certificate
-          ? _value.certificate
-          : certificate // ignore: cast_nullable_to_non_nullable
-              as String?,
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -525,7 +510,6 @@ class _$FileUploadResponseImpl implements _FileUploadResponse {
   const _$FileUploadResponseImpl(
       {@JsonKey(name: 'control_code') required this.controlCode,
       required this.token,
-      this.certificate,
       this.message,
       required final List<ElPakoError> errors,
       this.status,
@@ -543,10 +527,6 @@ class _$FileUploadResponseImpl implements _FileUploadResponse {
   /// Token of the document that was signed
   @override
   final String token;
-
-  /// Certificate of the signer if available
-  @override
-  final String? certificate;
 
   /// Server message
   @override
@@ -574,7 +554,7 @@ class _$FileUploadResponseImpl implements _FileUploadResponse {
 
   @override
   String toString() {
-    return 'FileUploadResponse(controlCode: $controlCode, token: $token, certificate: $certificate, message: $message, errors: $errors, status: $status, errorCode: $errorCode)';
+    return 'FileUploadResponse(controlCode: $controlCode, token: $token, message: $message, errors: $errors, status: $status, errorCode: $errorCode)';
   }
 
   @override
@@ -585,8 +565,6 @@ class _$FileUploadResponseImpl implements _FileUploadResponse {
             (identical(other.controlCode, controlCode) ||
                 other.controlCode == controlCode) &&
             (identical(other.token, token) || other.token == token) &&
-            (identical(other.certificate, certificate) ||
-                other.certificate == certificate) &&
             (identical(other.message, message) || other.message == message) &&
             const DeepCollectionEquality().equals(other._errors, _errors) &&
             (identical(other.status, status) || other.status == status) &&
@@ -596,8 +574,8 @@ class _$FileUploadResponseImpl implements _FileUploadResponse {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, controlCode, token, certificate,
-      message, const DeepCollectionEquality().hash(_errors), status, errorCode);
+  int get hashCode => Object.hash(runtimeType, controlCode, token, message,
+      const DeepCollectionEquality().hash(_errors), status, errorCode);
 
   @JsonKey(ignore: true)
   @override
@@ -618,7 +596,6 @@ abstract class _FileUploadResponse implements FileUploadResponse {
   const factory _FileUploadResponse(
           {@JsonKey(name: 'control_code') required final String controlCode,
           required final String token,
-          final String? certificate,
           final String? message,
           required final List<ElPakoError> errors,
           final ResponseStatus? status,
@@ -637,10 +614,6 @@ abstract class _FileUploadResponse implements FileUploadResponse {
 
   /// Token of the document that was signed
   String get token;
-  @override
-
-  /// Certificate of the signer if available
-  String? get certificate;
   @override
 
   /// Server message

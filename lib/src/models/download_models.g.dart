@@ -25,9 +25,9 @@ Map<String, dynamic> _$$FileDownloadResponseImplToJson(
         _$FileDownloadResponseImpl instance) =>
     <String, dynamic>{
       'signature_id': instance.signatureId,
-      'file': instance.file?.toJson(),
+      'file': instance.file,
       'message': instance.message,
-      'errors': instance.errors.map((e) => e.toJson()).toList(),
+      'errors': instance.errors,
       'status': _$ResponseStatusEnumMap[instance.status],
       'error_code': instance.errorCode,
     };

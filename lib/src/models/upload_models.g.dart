@@ -27,7 +27,7 @@ Map<String, dynamic> _$$FileUploadRequestImplToJson(
       'phone': instance.phone,
       'code': instance.code,
       'type': _$DocumentTypeEnumMap[instance.type]!,
-      'pdf': instance.pdf?.toJson(),
+      'pdf': instance.pdf,
       'timestamp': instance.timestamp,
     };
 
@@ -41,7 +41,6 @@ _$FileUploadResponseImpl _$$FileUploadResponseImplFromJson(
     _$FileUploadResponseImpl(
       controlCode: json['control_code'] as String,
       token: json['token'] as String,
-      certificate: json['certificate'] as String?,
       message: json['message'] as String?,
       errors: (json['errors'] as List<dynamic>)
           .map((e) => ElPakoError.fromJson(e as Map<String, dynamic>))
@@ -55,9 +54,8 @@ Map<String, dynamic> _$$FileUploadResponseImplToJson(
     <String, dynamic>{
       'control_code': instance.controlCode,
       'token': instance.token,
-      'certificate': instance.certificate,
       'message': instance.message,
-      'errors': instance.errors.map((e) => e.toJson()).toList(),
+      'errors': instance.errors,
       'status': _$ResponseStatusEnumMap[instance.status],
       'error_code': instance.errorCode,
     };
@@ -77,5 +75,5 @@ _$PdfOptionsImpl _$$PdfOptionsImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$PdfOptionsImplToJson(_$PdfOptionsImpl instance) =>
     <String, dynamic>{
-      'files': instance.files.map((e) => e.toJson()).toList(),
+      'files': instance.files,
     };

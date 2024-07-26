@@ -56,9 +56,6 @@ class FileUploadResponse extends ElpakoResponseBase with _$FileUploadResponse {
     /// Token of the document that was signed
     required String token,
 
-    /// Certificate of the signer if available
-    String? certificate,
-
     /// Server message
     String? message,
 
